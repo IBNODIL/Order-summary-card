@@ -17,7 +17,7 @@ body{
   justify-content: center;
 }
 
-.bg-image{
+#desktop{
   position: absolute;
   width: 100%;
   top: 0;
@@ -138,4 +138,30 @@ body{
 
 .text h5:hover{
   color: hsl(223, 47%, 23%);
+}
+
+@media only screen and (max-width: 600px) {
+  .container{
+    max-width: 300px;
+  }
+
+  #desktop{
+    width: 0;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  #mobile{
+    visibility: visible;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .text{
+    padding: 20px;
+    margin: 0;
+  }
 }
